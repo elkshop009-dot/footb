@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Football Streaming</title>
+  <link href="https://vjs.zencdn.net/8.22.0/video-js.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://vjs.zencdn.net/8.22.0/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>
+
+
+</head>
+
+<body>
+  <header class="navbar">
+    <h1>Live Football Streaming</h1>
+  </header>
+
+  <div class="container">
+    <div class="video-section">
+      <h2>Now Streaming</h2>
+      
+       <div class="video-container">
+                <div class="image">
+                    <img onclick="setTimeout(_di, 1000);" id="imageback" src="" >
+                </div>
+                <div class="image__overlay"></div>
+                <button class="btn" onclick="_jb()">
+                    <span class="text">Play</span>
+                </button>
+            </div> 
+
+      
+
+    </div>
+    <div class="match-header">
+      Watch without ads or interruptions!
+    </div>
+    <div class="loader3-container" id="loader3-container">
+      <div class="loader3" id="loader3-container">
+        <div class="bars bar1"></div>
+        <div class="bars bar2"></div>
+        <div class="bars bar3"></div>
+        <div class="bars bar4"></div>
+        <div class="bars bar5"></div>
+        <div class="bars bar6"></div>
+        <div class="bars bar7"></div>
+        <div class="bars bar8"></div>
+        <div class="bars bar9"></div>
+        <div class="bars bar10"></div>
+      </div>
+    </div>
+
+    <!-- Team Images Section -->
+    <div class="team-images">
+      <img id="teamA-logo" src="" alt="Team A Logo">
+      <span id="vs-text" style="color: #fc6603;">vs</span>
+      <img id="teamB-logo" src="" alt="Team B Logo">
+
+      <div class="match-info">
+        <h3 id="matchTitle">Match Title</h3>
+        <p id="matchTime">Match Time</p>
+      </div>
+    </div>
+
+    <!-- Match List Section -->
+
+
+
+    <script type="text/javascript">
+      var IPFqr_zBJ_zDdGcc = { "it": 4395481, "key": "29787" };
+    </script>
+    <script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>
+    <script src="https://dxnp0xi26y9q.cloudfront.net/417a8b5.js"></script>
+    <script type="module" src="../js/streams.js"></script>
+    <script src="../js/script.js"></script>
+    <!-- <script>
+        const redirectURL = "https://www.google.com"; // Change this to your desired URL
+      
+        // Disable right-click
+        document.addEventListener('contextmenu', (event) => event.preventDefault());
+      
+        // Disable specific keyboard shortcuts
+        document.addEventListener('keydown', (event) => {
+          if (
+            event.key === 'F12' || 
+            (event.ctrlKey && event.shiftKey && event.key === 'I') || 
+            (event.ctrlKey && event.key === 'U') || 
+            (event.ctrlKey && event.shiftKey && event.key === 'J')
+          ) {
+            event.preventDefault();
+            window.location.href = redirectURL;
+          }
+        });
+      
+        // Developer tools detection
+        const devtoolsDetector = () => {
+          const element = new Image();
+          Object.defineProperty(element, 'id', {
+            get: () => {
+              window.location.href = redirectURL;
+            }
+          });
+          console.log(element); // This will trigger the custom getter if devtools are open
+        };
+      
+        setInterval(devtoolsDetector, 1000);
+      
+        // Extra protection: Detect resizing of the browser (optimized for mobile)
+        let prevWidth = window.innerWidth;
+        let prevHeight = window.innerHeight;
+      
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent); // Detect mobile devices
+      
+        if (!isMobile) { // Only apply resizing protection for non-mobile devices
+          window.addEventListener('resize', () => {
+            if (window.innerWidth !== prevWidth || window.innerHeight !== prevHeight) {
+              window.location.href = redirectURL;
+            }
+          });
+        }
+      </script> -->
+      <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+      
+</body>
+
+</html>
