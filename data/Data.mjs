@@ -8,6 +8,15 @@ export const matches = [
     matchTime: '19:45 PM CET',
     imageback: 'https://sportcdns.live/news-2/68973dd8f24a441bf2424d142c67d4ec7baabb42be0cab201fc5c31f4cf5545f.png',
   },
+   {
+    id: 3,
+    teamA: 'juventus',
+    teamB: 'Atalanta',
+    logoA: 'https://images.fotmob.com/image_resources/logo/teamlogo/8564_small.png',
+    logoB: 'https://images.fotmob.com/image_resources/logo/teamlogo/8524_small.png',
+    matchTime: '19:45 PM CET',
+    imageback: 'https://sportcdns.live/news-2/68973dd8f24a441bf2424d142c67d4ec7baabb42be0cab201fc5c31f4cf5545f.png',
+  },
   {
     id: 2,
     teamA: 'Real Madrid',
