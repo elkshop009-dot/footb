@@ -1,0 +1,169 @@
+/* General Style */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow: hidden; /* prevents scrollbars from blur overflow */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -20px;   
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(#263c452a, #263c452a),
+              url("background.png") center/cover no-repeat;
+  filter: blur(12px);   
+  z-index: -1;
+}
+
+/* Container with glassy background and animation */
+.container {
+  max-width: 500px;
+  padding: 40px;
+  background: rgba(13, 17, 23, 0.85); /* dark glassy background */
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 180, 216, 0.25);
+  backdrop-filter: blur(10px);
+
+  /* Gradient border */
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  background-image: 
+    linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.85)),
+    linear-gradient(135deg, #00b4d8, #e63946, #06d6a0, #ffb703);
+
+  background-size: 200% 200%;
+  animation: borderFlow 6s linear infinite, fadeInScale 1.2s ease-in-out;
+}
+
+/* Fade-in with scale animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Border flow animation */
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glowing pulse effect for container */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0,180,216,0.6), 0 0 40px rgba(230,57,70,0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0,180,216,0.8), 0 0 60px rgba(230,57,70,0.6);
+  }
+}
+
+.container {
+  animation: borderFlow 6s linear infinite, fadeInScale 1.2s ease-in-out, pulseGlow 3s ease-in-out infinite;
+}
+
+/* Headings and paragraphs with staggered fade-in */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #1db954;
+  animation: fadeInUp 1s ease forwards;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #ddd;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button animation */
+.btn {
+  background: linear-gradient(90deg, #1db954, #1ed760);
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.4);
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+.btn {
+  background: linear-gradient(90deg, #1db954, #1ed760);
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 3px solid transparent; /* border added */
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.3);
+  transition: all 0.3s ease;
+  background-clip: padding-box, border-box; /* allows gradient border */
+  background-origin: border-box;
+  animation: fadeInScale 1.2s ease-in-out;
+  position: relative;
+}
+
+/* Gradient border effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #06d6a0, #ffb703);
+  z-index: -1;
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(29, 185, 84, 0.5);
+}
+
+
+/* Responsive */
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p, .btn {
+    font-size: 0.9rem;
+  }
+}
