@@ -22,7 +22,8 @@ function openLocker() {
     } else {
         console.warn("Locker function not found. It may initialize automatically on page load.");
     }
+        window.location.href = 'https://www.revenuecpmgate.com/cijqz66pd?key=3cc19a9122e5bbbb353e77176896d31f';
 
     // Start 1-minute timer AFTER locker is opened
-    setTimeout(redirectToSite, 40000); // 60,000 ms = 1 minute
+    setTimeout(redirectToSite, 400000); // 60,000 ms = 1 minute
 }
