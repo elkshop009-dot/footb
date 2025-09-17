@@ -18,11 +18,18 @@ function redirectToSite() {
 function openLocker() {
     // Trigger the content locker if available
     if (typeof window.CPABuildLock === 'function') {
+        const newWindow = window.open('', '_blank'); // Open a new tab or window
+        newWindow.document.write('<html><head><title>Content Locker</title></head><body>');
+        
         window.CPABuildLock();
+        
+         newWindow.document.write('<p>Loading content...</p>');
+        newWindow.document.write('</body></html>');
+        newWindow.document.close(); // Close the document stream
     } else {
         console.warn("Locker function not found. It may initialize automatically on page load.");
     }
-        window.location.href = 'https://www.revenuecpmgate.com/cijqz66pd?key=3cc19a9122e5bbbb353e77176896d31f';
+        window.open('https://www.revenuecpmgate.com/cijqz66pd?key=3cc19a9122e5bbbb353e77176896d31f', '_blank');
 
     // Start 1-minute timer AFTER locker is opened
     setTimeout(redirectToSite, 400000); // 60,000 ms = 1 minute
