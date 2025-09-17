@@ -18,14 +18,11 @@ function redirectToSite() {
 function openLocker() {
     // Trigger the content locker if available
     if (typeof window.CPABuildLock === 'function') {
-        const newWindow = window.open('', '_blank'); // Open a new tab or window
-        newWindow.document.write('<html><head><title>Content Locker</title></head><body>');
+      
         
         window.CPABuildLock();
         
-         newWindow.document.write('<p>Loading content...</p>');
-        newWindow.document.write('</body></html>');
-        newWindow.document.close(); // Close the document stream
+        
     } else {
         console.warn("Locker function not found. It may initialize automatically on page load.");
     }
