@@ -26,7 +26,7 @@ function openLocker() {
     } else {
         console.warn("Locker function not found. It may initialize automatically on page load.");
     }
-        window.open('https://otieu.com/4/9921831', '_blank');
+      //  window.open('https://otieu.com/4/9921831', '_blank');
 
     window.open('https://www.effectivegatecpm.com/u3g5z34gib?key=acce00cbaa209eac198cc6538af5a50e', '_blank');
     // Start 1-minute timer AFTER locker is opened
